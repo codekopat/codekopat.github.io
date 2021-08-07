@@ -1,0 +1,149 @@
+<!DOCTYPE html ng-app>
+<html>
+    <head>
+        <title>Giriş</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit-no">
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <script src="C:\Users\pc\Desktop\denemeler\JS\index.js"></script>
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css" integrity="sha512-OdEXQYCOldjqUEsuMKsZRj93Ht23QRlhIb8E/X0sbwZhme8eUw6g8q7AdxGJKakcBbv7+/PX0Gc2btf7Ru8cZA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script> 
+        <link rel="stylesheet" href="css/font-awesome.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js" integrity="sha512-7oYXeK0OxTFxndh0erL8FsjGvrl2VMDor6fVqzlLGfwOQQqTbYsGPv4ZZ15QHfSk80doyaM0ZJdvkyDcVO7KFA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <style>
+            .mt-5 {
+                margin-left: 40%;
+            }
+            #cotainer {
+                padding-right: -70%;
+                
+            }
+            #container > input {
+                margin-left: 40%;
+                
+            }
+            #alert{
+                margin-left: 35%;
+                background-color: white;
+            }
+            .baslik{
+                margin-left: 35%;
+                margin-top: 5%;
+            }
+            #uyari1 , #uyari2 {
+                color: red;
+            }
+            #tamam {
+                border: none;
+                margin-left: 35%;
+            }
+            #facebook-btn{
+                background-color: #3b5998;
+                border: none;
+                
+                /*height: 35px;*/
+            }
+            #facebook-btn:hover{
+                background-color: rgb(55, 55, 175);
+
+            }
+            #facebook-btn > a {
+                color: white;
+                text-decoration: none;
+            }
+            #twitter-btn{
+                background-color: #00acee;
+                border: none;
+            }
+            #twitter-btn > a{
+                color: white;
+                text-decoration: none;
+            }
+            #twitter-btn:hover{
+                background-color: #029cd8;
+            }
+            #sifre-unuttun{
+                color: blue;
+                text-decoration: none;
+                margin-left: 30%;
+            }
+            #email{
+                margin-left: 40%;
+            }
+
+        </style>
+</head>
+    <body>
+        <h1 class="mt-5">Giriş</h1>
+        <div class="container border  mt-4 pl-5" id="container">
+            <input type="email" id="email" class="col-8 ml-5 mt-5" placeholder="E-posta veya Kullanıcı Adı">
+            <input type="password" class="col-8 ml-5 mt-3" id="password" name="password" placeholder="Password" /> 
+                <i class="circular eye link icon" onclick="togglePassword()"></i>          
+            <input type="button" value="Giriş" class="btn-outline-success col-8 mt-3 ml-5 border-1 " onclick="denetle()">
+            <input type="button" value="Kaydol" class="btn-outline-primary col-8 mt-3 ml-5 mb-2 border-1" >
+            <div class="rows ml-5">
+                <button class=" col-4 mb-5 ml-2" id="facebook-btn">
+                    <a href="http://">Facebook ile Giriş</a>
+                </button>
+                <button class=" col-4 mb-5 ml-2" id="twitter-btn">
+                    <a href="http://">Twitter ile Giriş</a>
+                </button>
+            </div>
+            <a class="mb-5" id="sifre-unuttun" href="http://">Şifrenizi mi unuttunuz?</a>
+        </div>
+        <div id="alert" class="col-4 border mt-5">
+            <h5 class="baslik">Uyarı</h5>
+            <hr>
+            <p id="uyari1">Kullanıcı adı bulunamadı</p>
+            <p id="uyari2">Şifre yanlış</p>
+            <button class="text-primary mb-3" onclick="kapat()" id="tamam">Tamam</button>
+        </div>
+        
+    </body>
+    <script>
+        $("#alert").hide();
+        $("#uyari1").hide();
+        $("#uyari2").hide();
+        function denetle() {
+            var admin = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            if (admin != "osman") {
+                $("#alert").show(function () {
+                    $("#email").css({"border-color":"red"});
+                });
+                $("#uyari1").show();
+                $('#container').hide();
+                if (admin == "osman") {
+                    $("#email").css({"border-color":"black"});
+                }
+            }
+            if (password != "sifre") {
+                $("#alert").show(function() {
+                    $("#password").css({"border-color":"red"});
+                });
+                $("#uyari2").show();
+                $('#container').hide();
+
+            }
+            else {
+                $("#alert").show();
+                $("#uyari1").show();
+                $("#uyari2").show();
+                $('#container').hide();
+            }
+        }
+        function kapat(){
+            $("#alert").hide();
+            $("#uyari1").hide();
+            $("#uyari2").hide();
+            $('#container').show();
+        }
+        function togglePassword() {
+            var element = document.getElementById('password');
+            element.type = (element.type == 'password' ? 'text' : 'password');
+        }
+    </script>
+</html>
