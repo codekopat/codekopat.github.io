@@ -1,149 +1,237 @@
-<!DOCTYPE html ng-app>
-<html>
+<!DOCTYPE html>
+<html ng-app>
     <head>
-        <title>Giriş</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.css" />
+        <title>Anasayfa</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit-no">
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-        <script src="C:\Users\pc\Desktop\denemeler\JS\index.js"></script>
-        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <script src="C:\Users\pc\Desktop\denemeler\JS\index2.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css" integrity="sha512-OdEXQYCOldjqUEsuMKsZRj93Ht23QRlhIb8E/X0sbwZhme8eUw6g8q7AdxGJKakcBbv7+/PX0Gc2btf7Ru8cZA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script> 
-        <link rel="stylesheet" href="css/font-awesome.css" />
+        <script src="C:\Users\pc\Desktop\denemeler\node_modules\angular\angular.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js" integrity="sha512-7oYXeK0OxTFxndh0erL8FsjGvrl2VMDor6fVqzlLGfwOQQqTbYsGPv4ZZ15QHfSk80doyaM0ZJdvkyDcVO7KFA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <style>
-            .mt-5 {
-                margin-left: 40%;
+            #container {
+                background-color: gray;
+                width: 100%;
+                height: 56px; 
+                color: white;
+                position: fixed;
+                z-index: 99;
             }
-            #cotainer {
-                padding-right: -70%;
-                
+            #container > ul {
+                margin-top: 1%;
             }
-            #container > input {
-                margin-left: 40%;
-                
+            #container > ul > li {
+                list-style: none;
+                display: inline;
+                margin-right: 0.5%;
             }
-            #alert{
-                margin-left: 35%;
+            #container > ul > li > a {
+                color: white;
+                text-decoration: none;
+                font-size: 19px;
+                margin-top: 20px;
+                font-weight: bolder;
+                border-bottom: none;
+                border: none;
+                transition: 250ms;
+            }
+            #container > ul > li > a:hover {
+                border-bottom: solid 2px white;
+                padding: 3px;
+            }
+            #container > ul > li > a:focus {
+                border: solid 2px white;
+                padding: 3px;
+            }
+            #title {
+                margin-left: -3%;
+            }
+            #hamburger-menu {
+                height: 35px;
+                width: 35px;
+                border: solid 2px white;
+                border-radius: 50%;
+                margin-top: -10%;
+                margin-left: 90%;
+            }
+            #hamburger-menu > div {
+                height: 2px;
+                width: 20px;
                 background-color: white;
+                margin-left: 5px;
+                margin-top: 4px;
+                transition: 250ms;
             }
-            .baslik{
-                margin-left: 35%;
-                margin-top: 5%;
+            #hamburger-menu > #line-1 {
+                margin-top: 8px;
             }
-            #uyari1 , #uyari2 {
-                color: red;
+            .toggler-1 {
+                margin-top: 5px;
+                transform: translateY(5px) rotate(45deg);
             }
-            #tamam {
-                border: none;
-                margin-left: 35%;
+            .toggler-2 {
+                margin-top: 10px;
+                transform: translateY(-1px) rotate(-45deg); 
             }
-            #facebook-btn{
-                background-color: #3b5998;
-                border: none;
+            #mobil-menu > #listeler > ul {
+                list-style: none;
+                background-color: gray;
+                height: 100vh;
+            }
+            #mobil-menu > #listeler > ul > li {
+                width: 80%;
+                padding-left: 30%;
+
+            }
+            #mobil-menu > #listeler  {
+                width: 50%;
+                margin-left: 60%;
+                margin-top: -1%;
+            }
+            #mobil-menu > #listeler > ul > li > a {
+                text-align: left;
+                color: white;
+                text-decoration: none;
+                margin-top: 3%;
                 
-                /*height: 35px;*/
             }
-            #facebook-btn:hover{
-                background-color: rgb(55, 55, 175);
-
+            #mobil-menu > #listeler > ul > li {
+                margin-top: 5%;
+                margin-left: -55%;
+                font-size: 20px;
             }
-            #facebook-btn > a {
-                color: white;
-                text-decoration: none;
+            #mobil-menu > #listeler > ul > li > #lessons-2 {
+                margin-top: 2vh;
             }
-            #twitter-btn{
-                background-color: #00acee;
-                border: none;
-            }
-            #twitter-btn > a{
-                color: white;
-                text-decoration: none;
-            }
-            #twitter-btn:hover{
-                background-color: #029cd8;
-            }
-            #sifre-unuttun{
-                color: blue;
-                text-decoration: none;
-                margin-left: 30%;
-            }
-            #email{
-                margin-left: 40%;
-            }
-
+            
         </style>
-</head>
+    </head>
     <body>
-        <h1 class="mt-5">Giriş</h1>
-        <div class="container border  mt-4 pl-5" id="container">
-            <input type="email" id="email" class="col-8 ml-5 mt-5" placeholder="E-posta veya Kullanıcı Adı">
-            <input type="password" class="col-8 ml-5 mt-3" id="password" name="password" placeholder="Password" /> 
-                <i class="circular eye link icon" onclick="togglePassword()"></i>          
-            <input type="button" value="Giriş" class="btn-outline-success col-8 mt-3 ml-5 border-1 " onclick="denetle()">
-            <input type="button" value="Kaydol" class="btn-outline-primary col-8 mt-3 ml-5 mb-2 border-1" >
-            <div class="rows ml-5">
-                <button class=" col-4 mb-5 ml-2" id="facebook-btn">
-                    <a href="http://">Facebook ile Giriş</a>
-                </button>
-                <button class=" col-4 mb-5 ml-2" id="twitter-btn">
-                    <a href="http://">Twitter ile Giriş</a>
-                </button>
-            </div>
-            <a class="mb-5" id="sifre-unuttun" href="http://">Şifrenizi mi unuttunuz?</a>
+        <div class="container col-12" id="container">
+            <ul>
+                <li class="col-4" id="title">
+                    <a href="http://">Mental Artimeks</a>
+                </li>
+                <li class=" d-none d-sm-inline-block" id="lessons" style="margin-right: 2%;">
+                    <a href="http://">Eğitimler</a>
+                </li>
+                <li class="-col-2 d-none d-sm-inline-block" id="about" style="margin-right: 2%;">
+                    <a href="http://">Hakkımızda</a>
+                </li>
+                <li class="d-none d-sm-inline-block" id="accounts" style="margin-right: 2%;">
+                    <a href="http://">Hesabım</a>
+                </li>
+                <li class="d-none d-sm-inline-block" id="sign-up" style="margin-right: 2%;">
+                    <a href="/giris">Giriş</a>
+                </li>
+                <li class="col-2 d-none d-sm-inline-block " id="sign-in" style="margin-right: 2%;">
+                    <a href="/kaydol">Kaydol</a>
+                </li>
+            </ul>
+            <div class=" d-block d-sm-none d-none  d-md-none" id="mobil-menu">
+                <div class=""  id="hamburger-menu" onclick="toggleOpen()">
+                    <div id="line-1"></div>
+                    <div id="line-2"></div>
+                    <div id="line-3"></div>
+                </div>
+                <div class="" href="#" id="listeler">
+                    <ul>
+                        <li class="col-2" id="lessons-2">
+                            <a href="http://" >Eğitimler</a>
+                        </li>
+                        <li class="col-2" id="about-2" >
+                            <a href="http://">Hakkımızda</a>
+                        </li>
+                        <li class="col-2" id="sign-up-2" >
+                            <a href="http://" >Giriş</a>
+                        </li>
+                        <li class="col-2" id="sign-in-2">
+                            <a href="http://">Kaydol</a>
+                        </li>
+                        <li class="col-2 " id="accounts-2">
+                            <a href="http://" >Hesabım</a>
+                        </li> 
+                    </ul>  
+                </div>
+            </div>  
         </div>
-        <div id="alert" class="col-4 border mt-5">
-            <h5 class="baslik">Uyarı</h5>
-            <hr>
-            <p id="uyari1">Kullanıcı adı bulunamadı</p>
-            <p id="uyari2">Şifre yanlış</p>
-            <button class="text-primary mb-3" onclick="kapat()" id="tamam">Tamam</button>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h2>Eğitimlerimizi inceleyin</h2>
+        <br>
+        <div class="container border col-8 ml-5" id="container-2">
+            <div class="rows">
+                <img class=" col-4 img-fluid float-left " src="C:\Users\pc\Desktop\denemeler\jpg-file-icon-logo-element-illustration-design-155443757 (1).jpg" alt="ders-1">
+                <h3>Ders Adı</h3>
+                <br>
+                <li style="list-style: none;">
+                    <i class="fas fa-star" id="star-1"></i>
+                    <i class="fas fa-star" id="star-2" ></i>
+                    <i class="fas fa-star" id="star-3"></i>
+                    <i class="fas fa-star" id="star-4"></i>
+                    <i class="fas fa-star" id="star-5"></i>
+                    <p>(puanlama sayısı)</p>
+                </li>
+                
+                <br>
+                <p>Ders Açıklaması: Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae architecto magni eos dicta voluptate, inventore ab ea fuga nam excepturi, rerum, provident quam illo ipsum quae error quos tenetur blanditiis?</p>
+                <b>Eğitmen Adı</b>
+            </div>            
         </div>
-        
-    </body>
-    <script>
-        $("#alert").hide();
-        $("#uyari1").hide();
-        $("#uyari2").hide();
-        function denetle() {
-            var admin = document.getElementById("email").value;
-            var password = document.getElementById("password").value;
-            if (admin != "osman") {
-                $("#alert").show(function () {
-                    $("#email").css({"border-color":"red"});
-                });
-                $("#uyari1").show();
-                $('#container').hide();
-                if (admin == "osman") {
-                    $("#email").css({"border-color":"black"});
-                }
-            }
-            if (password != "sifre") {
-                $("#alert").show(function() {
-                    $("#password").css({"border-color":"red"});
-                });
-                $("#uyari2").show();
-                $('#container').hide();
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
 
+        <div class="container border col-8 ml-5" id="container-2">
+            <div class="rows">
+                <img class=" col-4 img-fluid float-left " src="C:\Users\pc\Desktop\denemeler\jpg-file-icon-logo-element-illustration-design-155443757 (1).jpg" alt="ders-1">
+                <h3>Ders Adı 2</h3>
+                <br>
+                <li style="list-style: none;">
+                    <i class="fas fa-star" id="star-1"></i>
+                    <i class="fas fa-star" id="star-2" ></i>
+                    <i class="fas fa-star" id="star-3"></i>
+                    <i class="fas fa-star" id="star-4"></i>
+                    <i class="fas fa-star" id="star-5"></i>
+                    <p>(puanlama sayısı)</p>
+                </li>
+
+                <p>Ders Açıklaması: Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae architecto magni eos dicta voluptate, inventore ab ea fuga nam excepturi, rerum, provident quam illo ipsum quae error quos tenetur blanditiis?</p>
+                <b>Eğitmen Adı</b>
+            </div>            
+        </div>
+        <script>
+            $("#listeler").hide();
+            function toggleOpen(){
+                $("#listeler").slideToggle(); 
+                $("#line-1").toggleClass("toggler-1");
+                $("#line-2").toggle();
+                $("#line-3").toggleClass("toggler-2");
             }
-            else {
-                $("#alert").show();
-                $("#uyari1").show();
-                $("#uyari2").show();
-                $('#container').hide();
+
+            var i = 1;
+            while (i<=3){
+                $("#star-"+i).css({"color":"yellow"});
+                i=i+1;
             }
-        }
-        function kapat(){
-            $("#alert").hide();
-            $("#uyari1").hide();
-            $("#uyari2").hide();
-            $('#container').show();
-        }
-        function togglePassword() {
-            var element = document.getElementById('password');
-            element.type = (element.type == 'password' ? 'text' : 'password');
-        }
-    </script>
+  
+        </script>
+    </body>
 </html>
