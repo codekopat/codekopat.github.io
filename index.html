@@ -55,19 +55,19 @@
                 width: 35px;
                 border: solid 2px white;
                 border-radius: 50%;
-                margin-top: -20%;
+                margin-top: -10%;
                 margin-left: 90%;
             }
             #hamburger-menu > div {
                 height: 2px;
                 width: 20px;
                 background-color: white;
-                margin-left: -6px;
+                margin-left: 5px;
                 margin-top: 4px;
                 transition: 250ms;
             }
             #hamburger-menu > #line-1 {
-                margin-top: 2px;
+                margin-top: 8px;
             }
             .toggler-1 {
                 margin-top: 5px;
@@ -80,10 +80,17 @@
             #mobil-menu > #listeler > ul {
                 list-style: none;
                 background-color: gray;
-                margin-left: 70%;
                 height: 100vh;
+            }
+            #mobil-menu > #listeler > ul > li {
+                width: 80%;
+                padding-left: 30%;
+
+            }
+            #mobil-menu > #listeler  {
                 width: 50%;
-                margin-top: -9%;
+                margin-left: 60%;
+                margin-top: -1%;
             }
             #mobil-menu > #listeler > ul > li > a {
                 text-align: left;
@@ -119,19 +126,19 @@
                     <a href="http://">Hesabım</a>
                 </li>
                 <li class="d-none d-sm-inline-block" id="sign-up" style="margin-right: 2%;">
-                    <a href="https://codekopat.github.io/giris.html">Giriş</a>
+                    <a href="/giris">Giriş</a>
                 </li>
                 <li class="col-2 d-none d-sm-inline-block " id="sign-in" style="margin-right: 2%;">
-                    <a href="https://codekopat.github.io/kaydol.html">Kaydol</a>
+                    <a href="/kaydol">Kaydol</a>
                 </li>
             </ul>
-            <div class="dropup d-block d-sm-none d-none  d-md-none" id="mobil-menu">
-                <div class="btn dropdown-toggle" data-toggle="dropdown" id="hamburger-menu" onclick="toggleOpen()">
+            <div class=" d-block d-sm-none d-none  d-md-none" id="mobil-menu">
+                <div class=""  id="hamburger-menu" onclick="toggleOpen()">
                     <div id="line-1"></div>
                     <div id="line-2"></div>
                     <div id="line-3"></div>
                 </div>
-                <div class="dropdown-item" href="#" id="listeler">
+                <div class="" href="#" id="listeler">
                     <ul>
                         <li class="col-2" id="lessons-2">
                             <a href="http://" >Eğitimler</a>
