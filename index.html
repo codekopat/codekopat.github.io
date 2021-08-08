@@ -55,7 +55,7 @@
                 width: 35px;
                 border: solid 2px white;
                 border-radius: 50%;
-                margin-top: -9%;
+                margin-top: -7%;
                 margin-left: 90%;
             }
             #hamburger-menu > div {
@@ -90,7 +90,7 @@
             #mobil-menu > #listeler  {
                 width: 50%;
                 margin-left: 60%;
-                margin-top: 1%;
+                margin-top: -1%;
             }
             #mobil-menu > #listeler > ul > li > a {
                 text-align: left;
@@ -107,10 +107,116 @@
             #mobil-menu > #listeler > ul > li > #lessons-2 {
                 margin-top: 2vh;
             }
-            
-            #myCarousel {
-                margin-top: 0%;
+            /*carousel start*/
+            .carousel-one {
+                max-width: 1000px;
+                margin: auto;
+                position: relative;
             }
+        
+            .carousel-one .mySlides {
+                display: none;
+            }
+        
+            .carousel-one .mySlides img {
+                width: 100%;
+            }
+        
+            .carousel-one .mySlides .caption-text {
+                color: #fff;
+                font-weight: 900;
+                font-size: 30px;
+                padding: 8px 12px;
+                position: absolute;
+                bottom: 38px;
+                width: 100%;
+                text-align: center;
+            }
+        
+            .carousel-one .mySlides .number-text {
+                color: #f2f2f2;
+                font-size: 12px;
+                padding: 8px 12px;
+                position: absolute;
+                top: 0px;
+            }
+        
+            .carousel-one .fade-In {
+                animation-name: fade;
+                animation-duration: 1.5s;
+            }
+        
+            .carousel-one .prev-slide,
+            .carousel-one .next-slide {
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                width: auto;
+                margin-top: -22px;
+                padding: 16px;
+                color: #9A9ABA;
+                font-weight: bold;
+                font-size: 18px;
+                border-radius: 0px 3px 3px 0px;
+                transition: 0.6s ease;
+            }
+        
+            .carousel-one .prev-slide:hover,
+            .carousel-one .next-slide:hover {
+                background-color: rgba(0, 0, 0, 0.8);
+                text-decoration: none;
+            }
+        
+            .carousel-one .next-slide {
+                right: 0px;
+                border-radius: 3px 0px 0px 3px;
+            }
+            
+            .dots{
+                text-align: center;
+            }
+            
+            .dot {
+                cursor: pointer;
+                height: 15px;
+                width: 15px;
+                margin: 0px 2px;
+                background-color: #bbb;
+                border-radius: 50%;
+                display: inline-block;
+                transition: background-color 0.6s ease;
+            }
+        
+            .dot:hover {
+                background-color: #717171;
+            }
+        
+            .active {
+                background-color: #717171;
+            }
+        
+            @keyframes fade {
+                from {
+                    /*IE8*/
+                    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+                    /*IE 5-7*/
+                    filter: alpha(opacity=40);
+                    /*Modern Browsers*/
+                    opacity: 0.4;
+                }
+        
+                to {
+                    /*IE8*/
+                    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+                    /*IE 5-7*/
+                    filter: alpha(opacity=100);
+                    /*Modern Browsers*/
+                    opacity: 1;
+                }
+            }
+            /*carousel end*/
+
+ 
         </style>
     </head>
     <body>
@@ -150,10 +256,10 @@
                             <a href="http://">Hakkımızda</a>
                         </li>
                         <li class="col-2" id="sign-up-2" >
-                            <a href="/giris" >Giriş</a>
+                            <a href="http://" >Giriş</a>
                         </li>
                         <li class="col-2" id="sign-in-2">
-                            <a href="/kaydol">Kaydol</a>
+                            <a href="http://">Kaydol</a>
                         </li>
                         <li class="col-2 " id="accounts-2">
                             <a href="http://" >Hesabım</a>
@@ -162,48 +268,38 @@
                 </div>
             </div>  
         </div>
-        
-
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img class="d-block w-100" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_17b24d83e3e%20text%20%7B%20fill%3A%23555%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_17b24d83e3e%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22285.9140625%22%20y%3D%22217.7%22%3EFirst%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="First slide">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_17b24d83e3f%20text%20%7B%20fill%3A%23444%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_17b24d83e3f%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23666%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22247.3125%22%20y%3D%22217.7%22%3ESecond%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="Second slide">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_17b24d83e42%20text%20%7B%20fill%3A%23333%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_17b24d83e42%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23555%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22276.9921875%22%20y%3D%22217.7%22%3EThird%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="Third slide">
-              </div>
+        <div class="carousel-one">
+            <div class="mySlides fade-In">
+                <div class="number-text">1/3</div>
+                <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_17b24d83e3e%20text%20%7B%20fill%3A%23555%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_17b24d83e3e%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22285.9140625%22%20y%3D%22217.7%22%3EFirst%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" />
+                <div class="caption-text">Caption Text1</div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
-          </div>
-
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <h2>Eğitimlerimizi inceleyin</h2>
+            <div class="mySlides fade-In">
+                <div class="number-text">2/3</div>
+                <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_17b26810e15%20text%20%7B%20fill%3A%23444%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_17b26810e15%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23666%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22247.3125%22%20y%3D%22217.7%22%3ESecond%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" />
+                <div class="caption-text">Caption Text2</div>
+            </div>
+            <div class="mySlides fade-In">
+                <div class="number-text">3/3</div>
+                <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_17b26810e1b%20text%20%7B%20fill%3A%23333%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_17b26810e1b%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23555%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22276.9921875%22%20y%3D%22217.7%22%3EThird%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" />
+                <div class="caption-text">Caption Text3</div>
+            </div>
+         
+            <!--Next and previous buttons start-->
+            <a class="prev-slide">&#10094;</a>
+            <a class="next-slide">&#10095;</a>
+            <!--Next and previous buttons end-->
+        </div>
+        <br />
+         
+        <!--dots start-->
+        <div class="dots">
+            <span class="dot dot1"></span>
+            <span class="dot dot2"></span>
+            <span class="dot dot3"></span>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <h2>En Popüler Eğitimlerimizi inceleyin</h2>
         <br>
         <div class="container border col-8 ml-5" id="container-2">
             <div class="rows">
@@ -218,20 +314,12 @@
                     <i class="fas fa-star" id="star-5"></i>
                     <p>(puanlama sayısı)</p>
                 </li>
-                
                 <br>
                 <p>Ders Açıklaması: Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae architecto magni eos dicta voluptate, inventore ab ea fuga nam excepturi, rerum, provident quam illo ipsum quae error quos tenetur blanditiis?</p>
                 <b>Eğitmen Adı</b>
             </div>            
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-
+        <br><br><br><br><br><br><br>
         <div class="container border col-8 ml-5" id="container-2">
             <div class="rows">
                 <img class=" col-4 img-fluid float-left " src="C:\Users\pc\Desktop\denemeler\jpg-file-icon-logo-element-illustration-design-155443757 (1).jpg" alt="ders-1">
@@ -245,13 +333,10 @@
                     <i class="fas fa-star" id="star-5"></i>
                     <p>(puanlama sayısı)</p>
                 </li>
-
                 <p>Ders Açıklaması: Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae architecto magni eos dicta voluptate, inventore ab ea fuga nam excepturi, rerum, provident quam illo ipsum quae error quos tenetur blanditiis?</p>
                 <b>Eğitmen Adı</b>
             </div>            
         </div>
-
-
         <div class="container col-10 border mt-5 ml-5" id="yorum">
             <h4>Yorum Ekle</h4>
             <br>
@@ -272,21 +357,92 @@
                     <input type="reset" value="İptal" class=" col-4 ml-2 btn-outline-danger">
                 </form>
         </div>
+        <br><br><br><br><br>
         <script>
-
             $("#listeler").hide();
             function toggleOpen(){
                 $("#listeler").slideToggle(); 
                 $("#line-1").toggleClass("toggler-1");
                 $("#line-2").toggle();
                 $("#line-3").toggleClass("toggler-2");
-                
             }
             var i = 1;
             while (i<=3){
                 $("#star-"+i).css({"color":"yellow"});
                 i=i+1;
             }
+            //carousel start
+        
+            var slideIndex = 1;
+            showSlides(slideIndex);
+        
+            //Next and previous buttons start
+            $(".prev-slide").click(function() {
+                plusSlides(-1);
+            });
+        
+            $(".next-slide").click(function() {
+                plusSlides(1);
+            });
+        
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+            $(".dot1").click(function() {
+                currentSlide(1);
+            });
+            $(".dot2").click(function() {
+                currentSlide(2);
+            });
+            $(".dot3").click(function() {
+                currentSlide(3);
+            });
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+            function showSlides(n) {
+                var i;
+                var slides = $(".mySlides");
+                var dots = $(".dot");
+                if (n > slides.length) {
+                    slideIndex = 1;
+                }
+                if (n < 1) {
+                    slideIndex = slides.length;
+                }
+                for (var i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+        
+                for (var i = 0; i < dots.length; i++) {
+                    dots[i].className.replace("active", "");
+                    dots[i].classList.remove("active");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+            }
+            /*
+            var slideIndex = 0;
+            showSlides();
+        
+            function showSlides() {
+                var i;
+                var slides = $(".mySlides");
+        
+                for (var i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+        
+                slideIndex++;
+        
+                if (slideIndex > slides.length) {
+                    slideIndex = 1;
+                }
+        
+                slides[slideIndex - 1].style.display = "block";
+                setTimeout(showSlides, 10000); // 5 saniyede bir resim değişecek
+            }
+            */
         </script>
     </body>
 </html>
