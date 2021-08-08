@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <title>Kaydol</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit-no">
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <script src="C:\Users\pc\Desktop\denemeler\JS\index2.js"></script>
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css" integrity="sha512-OdEXQYCOldjqUEsuMKsZRj93Ht23QRlhIb8E/X0sbwZhme8eUw6g8q7AdxGJKakcBbv7+/PX0Gc2btf7Ru8cZA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script> 
+        <link rel="stylesheet" href="css/font-awesome.css" />
+        <style>
+            h1 {
+                margin-left: 45%;
+            }
+            p {
+                color: red;
+            }
+        </style>
+    </body>
+    <body>
+        <h1 class="mt-5 mb-5">Kaydol</h1>
+        <div class="container border ">
+            <div class="rows ml-5">
+                <div class="rows mt-3">
+                    <label class="col-5">Adınız:</label>
+                    <label class="col-5 ml-4">Soyadınız:</label>
+                </div>
+                <input type="text" class="col-5 mb-4" id="ad" placeholder="Ad">
+                <input type="text" class="col-5 mb-4 ml-4" id="soyad" placeholder="Soyad">
+            </div>
+            <div class="rows ml-5">
+                <label class="col-5">Kullanıcı Adı:</label>
+                <label class="col-5 ml-4">Doğum Tarihiniz:</label>
+            </div>
+            <div class="rows ml-5">
+                <input type="text" class="col-5 mb-4" id="kllnc" placeholder="Kullanıcı Adı">
+                <input type="date" class="col-5 mb-4 ml-4" id="tarih">
+            </div>
+            <div class="rows ml-5">
+                <div class="rows">
+                    <label class="col-5 ">E-Posta:</label>
+                    <label class="col-5 ml-4">Telefon Numarası:</label>
+                </div>
+                <input type="email" class="col-5 " id="mail" placeholder="E-Posta adresi">
+                <input type="tel" class="col-5 mb-4 ml-4" id="telno" placeholder="Telefon Numarası">
+            </div>
+            <div class="rows ml-5">
+                <div class="rows">
+                    <label class="col-5">Şifre:</label>
+                    <label class="col-5 ml-4">Şifre Tekrarlayın:</label>
+                </div>
+                <input type="password" class="col-5" id="sifre" placeholder="Şifre">
+                <input type="password" class="col-5 ml-4" id="sifretekrar" placeholder="Şifre Tekrar">
+            </div>
+            <br>
+            <div class="rows ml-5">
+                <input type="checkbox" id="sozlesme"> <a href="http://">Kullanıcı Sözleşme</a>sini okudum ve kabul ediyorum.
+                <input class="col-10 btn-outline-success mb-5 mt-2" type="submit" value="Kaydol" onclick="hata_bul()">
+            </div>
+            <p class="uyari1">Ad ve Soyad alanı boş bırakılamaz!</p>
+            <p class="uyari2">Kullanıcı Adı boş bırakılamaz!</p>
+            <p class="uyari3">Kullanıcı Adı benzersiz olmalı!</p>
+            <p class="uyari4">E-Posta veya Telefon Numarasından biri girilmeli!</p>
+            <p class="uyari5">Şifre alanı boş bırakılamaz!</p>
+            <p class="uyari6">Şifreler aynı olmak zorunda!</p>
+            <p class="uyari7">Kullanıcı Sözleşmesini kabul etmelisiniz!</p>
+            <p class="uyari8">Geçerli bir E-Posta adresi giriniz!</p>
+            <p class="uyari9">Geçerli bir Telefon Numarası giriniz!</p>
+        </div>
+        <script>
+            $(".uyari1").hide();
+            $(".uyari2").hide();
+            $(".uyari3").hide();
+            $(".uyari4").hide();
+            $(".uyari5").hide();
+            $(".uyari6").hide();
+            $(".uyari7").hide();
+            $(".uyari8").hide();
+            $(".uyari9").hide();
+            function hata_bul() {
+                var ad = document.getElementById("ad").value;
+                var soyad = document.getElementById("soyad").value;
+                var mail = document.getElementById("mail").value;
+                var telno = document.getElementById("telno").value;
+                var sifre = document.getElementById("sifre").value;
+                var sifretekrar = document.getElementById("sifretekrar").value;
+                var chekb = document.getElementById("sozlesme").value;
+                var kllnc = document.getElementById("kllnc").value;
+                if (ad =="" && soyad == "") {
+                    $(".uyari1").show();
+                    if (ad=="") {
+                        $("#ad").css({"border-color":"red"});
+                    }
+                    if (soyad==""){
+                        $("#soyad").css({"border-color":"red"});
+                    }
+                }
+                if (kllnc == "") {
+                    $(".uyari2").show();
+                    $("#kllnc").css({"border-color":"red"});
+                }
+                if (mail == "" && telno == "") {
+                    $(".uyari4").show();
+                    $("#mail").css({"border-color":"red"});
+                    $("#telno").css({"border-color":"red"});
+                }
+                if ("@" && ".com" in mail) {
+                    $(".uyari8").show();
+                }
+                if (length(telno) < 11) {
+                    $(".uyari9").show();
+                }
+                if (sifre == "") {
+                    $(".uyari5").show();
+                    $("#sifre").css({"border-color":"red"});
+                }
+                if (sifre != sifretekrar) {
+                    $(".uyari6").show();
+                    $("#sifre").css({"border-color":"red"});
+                    $("#sifretekrar").css({"border-color":"red"});
+                }
+                if (chekb=false) {
+                    $(".uyari7").show();
+                }  
+            }
+
+           
+            
+        </script>
+    </body>
+</html>
