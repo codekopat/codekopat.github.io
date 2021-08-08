@@ -164,40 +164,6 @@
         </div>
         
 
-
-
-
-
-
-
-
-
-
-
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
               <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -224,37 +190,6 @@
               <span class="sr-only">Next</span>
             </a>
           </div>
-
-
-
-
-
-        
-
-
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         <br>
         <br>
@@ -315,6 +250,28 @@
                 <b>Eğitmen Adı</b>
             </div>            
         </div>
+
+
+        <div class="container col-10 border mt-5 ml-5" id="yorum">
+            <h4>Yorum Ekle</h4>
+            <br>
+                <form>
+                    <label class="ml-5">Ad Soyad:</label>
+                    <br>
+                    <input type="text" id="name-surname" class="col-8 ml-5" placeholder="Adınız ve Soyadınız">
+                    <br>
+                    <label class="ml-5 mt-5">E-Mail Adresi:</label>
+                    <br>
+                    <input type="text" id="name-surname" class="col-8 ml-5" placeholder="E-Mail adresiniz">
+                    <br>
+                    <label class="ml-5 mt-5">Yorumunuz</label>
+                    <br>
+                    <textarea name="mesaj" class="col-8 ml-5" placeholder="Yorumunuz" required="required" style="margin-top: 0px; margin-bottom: 0px; height: 116px; font-family: monospace;"></textarea>
+                    <br>
+                    <input type="submit" value="Gönder" class="col-4 ml-5 mt-5 btn-outline-success">
+                    <input type="reset" value="İptal" class=" col-4 ml-2 btn-outline-danger">
+                </form>
+        </div>
         <script>
 
             $("#listeler").hide();
@@ -324,21 +281,11 @@
                 $("#line-2").toggle();
                 $("#line-3").toggleClass("toggler-2");
             }
-
             var i = 1;
             while (i<=3){
                 $("#star-"+i).css({"color":"yellow"});
                 i=i+1;
             }
-  
-
-
-
-
-            
-            
-    
-    
         </script>
     </body>
 </html>
